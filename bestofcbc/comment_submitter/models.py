@@ -33,6 +33,7 @@ def post_to_twitter(sender, **kwargs):
             tweet = '%s %s' % (c.comment,tiny_url)
         else:
             tweet = '%s... %s' % (c.comment[:110],tiny_url)
+        #not the real password, so don't even try!!!
         api = twitter.Api('bestofcbc','1qaz@WSX')
         api.PostUpdate(tweet)
     
